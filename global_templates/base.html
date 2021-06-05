@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icon.css' %}">
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body style="background-color:#d1d1ff">
+    <script src="{% static 'js/materialize.min.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/custon.js' %}"></script>
+    
+
+    <nav style="background-color:rgb(97 219 208)">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">Logo <i class="material-icons right">sentiment_very_satisfied</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="sass.html"><i class="material-icons left">search</i></a></li>
+          <li><a href="badges.html"><i class="material-icons right">view_module</i></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <div class="container mt-10">
+      {% block container %}{% endblock container %}
+    </div>
+
+    
+  
+
+  {% block js %}{% endblock js %}
+</body>
+</html>
